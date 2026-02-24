@@ -43,7 +43,7 @@ public class ContactInfo  implements java.io.Serializable {
    
    //  @GenericGenerator(name="com.example.hibernate.model.ContactinfoIdGenerator", strategy="foreign")@Id @GeneratedValue(generator="com.example.hibernate.model.ContactinfoIdGenerator")
 
-    @Id @GeneratedValue
+    @Id 
     @Column(name="profesorId", unique=true, nullable=false)
     public int getProfesorId() {
         return this.profesorId;
