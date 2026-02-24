@@ -4,14 +4,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
-
-import com.example.hibernate.model.Ciclo;
-import com.example.hibernate.model.Comunidadautonoma;
-import com.example.hibernate.model.Direccion;
-import com.example.hibernate.model.Modulo;
+import com.example.hibernate.model.ContactInfo;
 import com.example.hibernate.model.Profesor;
-import com.example.hibernate.model.Provincia;
-import com.example.hibernate.model.Tiposbasicos;
 
 public class HibernateUtil {
 
@@ -30,12 +24,8 @@ public class HibernateUtil {
             // Build SessionFactory using the service registry
             sessionFactory = new org.hibernate.boot.MetadataSources(serviceRegistry)
                   .addAnnotatedClass(Profesor.class)
-                  .addAnnotatedClass(Tiposbasicos.class)
-                  .addAnnotatedClass(Provincia.class)
-                  .addAnnotatedClass(Modulo.class)
-                  .addAnnotatedClass(Comunidadautonoma.class)
-                  .addAnnotatedClass(Direccion.class)
-                  .addAnnotatedClass(Ciclo.class)
+                  .addAnnotatedClass(ContactInfo.class)
+                 
                     .buildMetadata()
                     .buildSessionFactory();
         } catch (Exception ex) {
